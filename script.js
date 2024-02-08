@@ -31,4 +31,7 @@ function containerMaker(pixels) {
 
 containerMaker(16);
 
-
+const btnCustomize = document.querySelector('#btn-customize');
+btnCustomize.addEventListener('click', (event) =>{
+    let promptCustomize = prompt("Set a number of pixels (ONLY 1-100)");
+})
