@@ -29,9 +29,26 @@ function containerMaker(pixels) {
     })
 } 
 
-containerMaker(16);
+
 
 const btnCustomize = document.querySelector('#btn-customize');
+const allDivSquareContClone = document.querySelectorAll('.div-square-cont');
+
+const childNodes = gridContainer.childNodes;
+
 btnCustomize.addEventListener('click', (event) =>{
-    let promptCustomize = prompt("Set a number of pixels (ONLY 1-100)");
+    let promptCustomize = prompt('Set a number of pixels (ONLY 1-100)');
+    
+    if (promptCustomize > 100) {
+        alert('You\'ve exceeded the limit.');
+    } else if (promptCustomize < 1) {
+        alert('How will you draw?')
+    } else {
+        if (childNodes.length > 0) {
+            while (gridContainer.firstChild) {
+                gridContainer.removeChild(gridContainer.firstChild)
+            }
+        }
+        containerMaker(promptCustomize);
+    }
 })
