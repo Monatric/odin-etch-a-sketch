@@ -25,3 +25,14 @@ in prompt will ask "Set a number of pixels (ONLY 1-100)"
     if prompt answer is more than 100, then return "You've exceeded the limit."
     if prompt answer is less than 1, then return "How will you draw?"
     if prompt answer is between 1-100, then return the answer as an argument in containerMaker
+
+
+**extra credit**
+Rather than a color change from black to white, each interaction should randomize the square’s RGB value entirely.
+
+*my pseudocode*
+
+
+Additionally, implement a progressive darkening effect where each interaction adds 10% more black or color to the square. The objective is to achieve a completely black square only after ten interactions.
+
+*my pseudocode*
