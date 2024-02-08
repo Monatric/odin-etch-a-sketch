@@ -22,13 +22,15 @@ function containerMaker(pixels) {
     })
 
     const allDivSquare = document.querySelectorAll('.div-square');
+    
     allDivSquare.forEach(square => {
         square.addEventListener('mouseover', (event) => {
-            event.target.style.backgroundColor = 'black'; 
+            const randomColor = Math.floor(Math.random()*16777215).toString(16);
+            event.target.style.backgroundColor = '#' + randomColor; 
+            
         })
     })
 } 
-
 
 
 const btnCustomize = document.querySelector('#btn-customize');
@@ -52,3 +54,5 @@ btnCustomize.addEventListener('click', (event) =>{
         containerMaker(promptCustomize);
     }
 })
+
+
