@@ -20,6 +20,15 @@ function containerMaker(pixels) {
             element.appendChild(divSquareClone);
         }
     })
+
+    const allDivSquare = document.querySelectorAll('.div-square');
+    allDivSquare.forEach(square => {
+        square.addEventListener('mouseover', (event) => {
+            event.target.style.backgroundColor = 'black'; 
+        })
+    })
 } 
 
 containerMaker(16);
+
+
